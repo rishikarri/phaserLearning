@@ -2,13 +2,17 @@ var demo = {};
 
 demo.state0 = function(){};
 demo.state0.prototype = {
-    preload: function(){},
+    preload: function(){
+    	game.load.image('hero', './Assets/Sprites/Evil_Bot/PNG/PNG_Sequences/Large/Running/Running__000.png');
+    },
     create: function(){
         game.stage.backgroundColor = '#80ff80';
 
         
         addChangeStateEventListeners();
         game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+
+        game.add.sprite(1500 / 2, 1000 / 2, 'hero');
         console.log('state0');
     },
     update: function(){}
